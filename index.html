@@ -13,14 +13,14 @@
   <meta property="og:title" content="Pure Exterior Home Solutions | Exterior Cleaning Services in Utah">
   <meta property="og:description" content="Professional window washing, pressure washing, solar panel cleaning & surface cleaning in Davis & Salt Lake County, Utah. Honest pricing. Exceptional results.">
   <meta property="og:url" content="https://www.pureexteriorhomesolutions.com/">
-  <meta property="og:image" content="https://pure-exteriors.vercel.app/images/purehero.png">
+  <meta property="og:image" content="[PLACEHOLDER_OG_IMAGE]">
   <meta property="og:site_name" content="Pure Exterior Home Solutions">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pure Exterior Home Solutions | Exterior Cleaning Utah">
   <meta name="twitter:description" content="Window washing, pressure washing, solar panel cleaning & surface cleaning in Davis & Salt Lake County, Utah.">
-  <meta name="twitter:image" content="https://pure-exteriors.vercel.app/images/purehero.png">
+  <meta name="twitter:image" content="[PLACEHOLDER_OG_IMAGE]">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,8 +35,8 @@
     "name": "Pure Exterior Home Solutions",
     "description": "Professional exterior cleaning services including window washing, pressure washing, solar panel cleaning, and surface cleaning in Davis and Salt Lake Counties, Utah.",
     "url": "https://www.pureexteriorhomesolutions.com",
-    "telephone": "801-500-4545",
-    "email": "pureexteriorhomesolutions@gmail.com",
+    "telephone": "[PLACEHOLDER_PHONE]",
+    "email": "[PLACEHOLDER_EMAIL]",
     "founder": { "@type": "Person", "name": "Trevor Jenson" },
     "areaServed": [
       { "@type": "County", "name": "Davis County", "containedInPlace": { "@type": "State", "name": "Utah" } },
@@ -128,14 +128,9 @@ nav#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding:
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: var(--transition); }
 
 /* ===== HERO ===== */
-#hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding-top: calc(var(--nav-h) + 48px); padding-bottom: 80px; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background: #1a2e3f url('images/purehero.png') center/cover no-repeat; }
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(160deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.65) 100%);
-}
+#hero { position: relative; min-height: 100vh; display: flex; align-items: flex-end; padding-bottom: 80px; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: #1a2e3f url('[PLACEHOLDER_HERO_PHOTO]') center/cover no-repeat; }
+.hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.65) 40%, rgba(0,0,0,0.28) 100%); }
 .hero-content { position: relative; z-index: 2; max-width: 820px; }
 .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--white); border-radius: var(--radius-pill); padding: 8px 18px; margin-bottom: 28px; font-size: 0.875rem; font-weight: 600; color: var(--black); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
 .hero-badge .stars { color: var(--gold); }
@@ -146,14 +141,14 @@ nav#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding:
 .g-logo .g4 { color: #4285F4; }
 .g-logo .g5 { color: #34A853; }
 .g-logo .g6 { color: #EA4335; }
-.hero h1 { color: #FFFFFF; margin-bottom: 22px; }
-.hero-sub { color: rgba(255,255,255,0.92); font-size: 1.15rem; line-height: 1.65; margin-bottom: 36px; max-width: 520px; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+.hero h1 { color: var(--white); margin-bottom: 22px; text-shadow: 0 2px 6px rgba(0,0,0,0.95), 0 6px 20px rgba(0,0,0,0.8), 0 12px 40px rgba(0,0,0,0.5); }
+.hero-sub { color: rgba(255,255,255,0.95); font-size: 1.15rem; line-height: 1.65; margin-bottom: 36px; max-width: 520px; text-shadow: 0 1px 4px rgba(0,0,0,0.7); }
 
 /* ===== SERVICES GRID ===== */
 #services { background: var(--white); }
 .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .service-card { position: relative; border-radius: var(--radius-card); overflow: hidden; aspect-ratio: 3/4; cursor: pointer; }
-.service-card-bg { position: absolute; inset: 0; background: #1a3a50 url('images/img2_window-washing.jpg') center/cover no-repeat; transition: transform 0.4s ease; }
+.service-card-bg { position: absolute; inset: 0; background: #1a3a50 url('[PLACEHOLDER]') center/cover no-repeat; transition: transform 0.4s ease; }
 .service-card:hover .service-card-bg { transform: scale(1.05); }
 .service-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.05) 55%); transition: var(--transition); }
 .service-card:hover::after { background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 55%); }
@@ -169,13 +164,13 @@ nav#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding:
 .pricing-save { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.4rem; letter-spacing: 0.1em; color: var(--blue); text-align: center; margin-bottom: 8px; }
 .pricing-subtitle { text-align: center; color: var(--black); font-size: 1.1rem; margin-bottom: 48px; }
 .video-thumb { max-width: 680px; margin: 0 auto 56px; border-radius: var(--radius-card); overflow: hidden; position: relative; aspect-ratio: 16/9; cursor: pointer; box-shadow: 0 16px 48px rgba(0,0,0,0.15); }
-.video-bg { width: 100%; height: 100%; background: #1a2e3f url('images/img2_video-thumbnail.jpg') center/cover no-repeat; }
+.video-bg { width: 100%; height: 100%; background: #1a2e3f url('[PLACEHOLDER_VIDEO_THUMB]') center/cover no-repeat; }
 .play-btn { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.22); }
 .play-circle { width: 72px; height: 72px; border-radius: 50%; background: rgba(41,171,226,0.92); display: flex; align-items: center; justify-content: center; transition: transform 0.2s, box-shadow 0.2s; }
 .video-thumb:hover .play-circle { transform: scale(1.1); box-shadow: 0 8px 32px rgba(41,171,226,0.5); }
 .play-circle svg { width: 28px; height: 28px; margin-left: 4px; }
 .pricing-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.pricing-card { background: var(--white); border-radius: var(--radius-card); padding: 36px 28px; box-shadow: var(--shadow-card); border: 2px solid transparent; transition: var(--transition); display: flex; flex-direction: column; justify-content: space-between; }
+.pricing-card { background: var(--white); border-radius: var(--radius-card); padding: 36px 28px; box-shadow: var(--shadow-card); border: 2px solid transparent; transition: var(--transition); display: flex; flex-direction: column; }
 .pricing-card:hover { border-color: rgba(41,171,226,0.4); transform: translateY(-4px); }
 .pricing-card.featured { background: var(--blue); border-color: var(--blue); transform: translateY(-8px); box-shadow: 0 16px 48px rgba(41,171,226,0.35); }
 .pricing-card.featured * { color: var(--white) !important; }
@@ -210,6 +205,23 @@ nav#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding:
 .review-more { color: var(--blue); font-size: 0.85rem; font-weight: 500; display: inline-block; margin-top: 8px; }
 .review-more:hover { text-decoration: underline; }
 
+/* ===== PROCESS ===== */
+#process { background: var(--bg-dark); padding: 96px 0; }
+#process .section-header h2 { color: var(--white); }
+.process-sub { color: var(--blue); text-align: center; font-size: 1.05rem; margin-top: -40px; margin-bottom: 56px; }
+.process-steps { display: flex; flex-direction: column; }
+.process-step { display: grid; grid-template-columns: 1fr 1fr; min-height: 400px; }
+.process-step:nth-child(even) > :first-child { order: 2; }
+.process-step:nth-child(even) > :last-child { order: 1; }
+.step-photo { position: relative; overflow: hidden; min-height: 380px; }
+.step-photo-bg { position: absolute; inset: 0; background: #0f1e2a url('[PLACEHOLDER_PROCESS_PHOTO]') center/cover no-repeat; transition: transform 0.5s ease; }
+.process-step:hover .step-photo-bg { transform: scale(1.04); }
+.step-content { background: #0f1e2a; padding: 52px 44px; display: flex; flex-direction: column; justify-content: center; }
+.step-num { width: 52px; height: 52px; border-radius: 50%; background: var(--blue); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.step-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; }
+.step-desc { color: rgba(255,255,255,0.80); line-height: 1.72; font-size: 1rem; }
+.process-cta-wrap { text-align: center; padding: 56px 0 0; }
+
 /* ===== SOCIAL ===== */
 #social { background: var(--bg-light); }
 .social-intro { text-align: center; margin-bottom: 8px; }
@@ -218,7 +230,7 @@ nav#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding:
 .photo-strip::-webkit-scrollbar { height: 4px; }
 .photo-strip::-webkit-scrollbar-track { background: #d8eef9; border-radius: 2px; }
 .photo-strip::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }
-.strip-photo { flex: 0 0 220px; height: 220px; border-radius: 16px; overflow: hidden; scroll-snap-align: start; background: #1a3a50 url('images/img2_window-washing.jpg') center/cover no-repeat; transition: transform 0.3s; cursor: pointer; }
+.strip-photo { flex: 0 0 220px; height: 220px; border-radius: 16px; overflow: hidden; scroll-snap-align: start; background: #1a3a50 url('[PLACEHOLDER]') center/cover no-repeat; transition: transform 0.3s; cursor: pointer; }
 .strip-photo:hover { transform: scale(0.97); }
 .social-icons-row { display: flex; align-items: center; justify-content: center; gap: 32px; }
 .si-link { color: var(--blue); transition: var(--transition); }
@@ -242,7 +254,7 @@ nav#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding:
 .acc-body.show { display: block; }
 
 /* ===== TESTIMONIAL ===== */
-#testimonial { position: relative; padding: 100px 0; overflow: hidden; background: #1a2e3f url('images/img2_testimonial-bg.jpg') center/cover no-repeat; }
+#testimonial { position: relative; padding: 100px 0; overflow: hidden; background: #1a2e3f url('[PLACEHOLDER_TESTIMONIAL_BG]') center/cover no-repeat; }
 #testimonial::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.70); }
 .testi-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; max-width: 860px; margin: 0 auto; }
 .testi-qmark { font-family: 'Barlow Condensed', sans-serif; font-size: 15rem; line-height: 0.75; color: rgba(41,171,226,0.22); font-weight: 900; user-select: none; align-self: flex-start; }
@@ -268,7 +280,7 @@ blockquote { font-size: clamp(1.2rem, 2.5vw, 1.75rem); font-style: italic; color
 
 /* ===== CTA BANNER ===== */
 #cta-banner { background: var(--black); padding: 100px 0; text-align: center; position: relative; overflow: hidden; }
-#cta-banner::before { content: ''; position: absolute; inset: 0; background: url('images/img2_cta-bg.jpg') center/cover no-repeat; opacity: 0.12; }
+#cta-banner::before { content: ''; position: absolute; inset: 0; background: url('[PLACEHOLDER_CTA_BG]') center/cover no-repeat; opacity: 0.12; }
 #cta-banner > * { position: relative; z-index: 2; }
 #cta-banner h2 { color: var(--white); margin-bottom: 16px; }
 #cta-banner p { color: rgba(255,255,255,0.72); font-size: 1.15rem; margin-bottom: 40px; max-width: 520px; margin-left: auto; margin-right: auto; }
@@ -361,7 +373,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
       <li><a href="#areas">Service Areas</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="tel:801-500-4545" class="btn btn-primary" aria-label="Call us">
+      <a href="tel:[PLACEHOLDER_PHONE]" class="btn btn-primary" aria-label="Call us">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
         Call Us
       </a>
@@ -375,13 +387,13 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-  <button class="close-menu" id="close-menu" aria-label="Close menu">&#x2715;</button>
+  <button class="close-menu" id="close-menu" aria-label="Close menu">✕</button>
   <a href="#about">About Us</a>
   <a href="#services">Our Services</a>
   <a href="#reviews">Reviews</a>
   <a href="#commercial">Commercial Services</a>
   <a href="#areas">Service Areas</a>
-  <a href="tel:801-500-4545" class="btn btn-primary btn-lg">&#128222; Call Us</a>
+  <a href="tel:[PLACEHOLDER_PHONE]" class="btn btn-primary btn-lg">📞 Call Us</a>
   <a href="#quote" class="btn btn-outline btn-lg" style="border-color:var(--blue);color:var(--blue);margin-top:8px;">Get a Free Quote</a>
 </div>
 
@@ -393,13 +405,13 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge" aria-label="5-star rating on Google">
-        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="stars" aria-hidden="true">★★★★★</span>
         <strong>5 Stars on</strong>
         <span class="g-logo" aria-label="Google"><span class="g1">G</span><span class="g2">o</span><span class="g3">o</span><span class="g4">g</span><span class="g5">l</span><span class="g6">e</span></span>
       </div>
-      <h1 id="hero-heading" class="display display-lg">Utah's Premier<br>Exterior Home<br>Cleaning Experts</h1>
-      <p class="hero-sub">Window washing, pressure washing, solar panel cleaning &amp; surface cleaning &mdash; serving Davis &amp; Salt Lake Counties with commercial-grade results.</p>
-      <a href="#quote" class="btn btn-primary btn-lg" aria-label="Get a free exterior cleaning quote">Get Your Quote &nbsp;&rarr;</a>
+      <h1 id="hero-heading" class="display display-lg">Utah's <span style="color:#29ABE2">Premier</span><br>Exterior Home<br>Cleaning Experts</h1>
+      <p class="hero-sub">Window washing, pressure washing, solar panel cleaning &amp; surface cleaning — serving Davis &amp; Salt Lake Counties with commercial-grade results.</p>
+      <a href="#quote" class="btn btn-primary btn-lg" aria-label="Get a free exterior cleaning quote">Get Your Quote &nbsp;→</a>
     </div>
   </div>
 </section>
@@ -418,27 +430,27 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
     <div class="services-grid">
 
       <article class="service-card" aria-label="Window Washing Service">
-        <div class="service-card-bg" style="background-image:url('images/img2_window-washing.jpg')" role="img" aria-label="Professional window washing"></div>
+        <div class="service-card-bg" style="background-image:url('[PLACEHOLDER_WINDOW_WASHING]')" role="img" aria-label="Professional window washing"></div>
         <div class="service-card-info">
           <h3 class="service-card-name">Window Washing</h3>
-          <div class="service-card-desc">Exterior panes, screens, frames, sills &amp; tracks. Our commercial DI/RO pure water system leaves every window spotless and streak-free. No ladders for technicians &mdash; fully insured.
+          <div class="service-card-desc">Exterior panes, screens, frames, sills &amp; tracks. Our commercial DI/RO pure water system leaves every window spotless and streak-free. No ladders for technicians — fully insured.
             <span class="service-price">From $150 residential</span>
           </div>
         </div>
       </article>
 
       <article class="service-card" aria-label="Solar Panel Cleaning Service">
-        <div class="service-card-bg" style="background-image:url('images/img2_solar-panel.jpg')" role="img" aria-label="Solar panel cleaning service Utah"></div>
+        <div class="service-card-bg" style="background-image:url('[PLACEHOLDER_SOLAR_PANEL]')" role="img" aria-label="Solar panel cleaning service Utah"></div>
         <div class="service-card-info">
           <h3 class="service-card-name">Solar Panel Cleaning</h3>
-          <div class="service-card-desc">Maximize your solar energy output with our pure water DI/RO cleaning system. No streaks, no residue &mdash; just peak panel performance year-round for Utah homeowners.
+          <div class="service-card-desc">Maximize your solar energy output with our pure water DI/RO cleaning system. No streaks, no residue — just peak panel performance year-round for Utah homeowners.
             <span class="service-price">From $100 residential</span>
           </div>
         </div>
       </article>
 
       <article class="service-card" aria-label="Pressure Washing Service" id="commercial">
-        <div class="service-card-bg" style="background-image:url('images/img2_pressure-washing.jpg')" role="img" aria-label="Pressure washing driveways and surfaces"></div>
+        <div class="service-card-bg" style="background-image:url('[PLACEHOLDER_PRESSURE_WASHING]')" role="img" aria-label="Pressure washing driveways and surfaces"></div>
         <div class="service-card-info">
           <h3 class="service-card-name">Pressure Washing</h3>
           <div class="service-card-desc">Our 3,500 PSI / 8 GPM trailer with hot-water burner cuts through grease, oil, mold &amp; heavy buildup. Dual hose capability for driveways, fences, siding, and commercial properties.
@@ -448,7 +460,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
       </article>
 
       <article class="service-card" aria-label="Surface Cleaning Service">
-        <div class="service-card-bg" style="background-image:url('images/img2_surface-cleaning.jpg')" role="img" aria-label="Surface cleaning patios and driveways"></div>
+        <div class="service-card-bg" style="background-image:url('[PLACEHOLDER_SURFACE_CLEANING]')" role="img" aria-label="Surface cleaning patios and driveways"></div>
         <div class="service-card-info">
           <h3 class="service-card-name">Surface Cleaning</h3>
           <div class="service-card-desc">Patios, driveways, walkways &amp; commercial hard surfaces professionally restored. Hot water pressure washing for superior results. Residential and commercial properties welcome.
@@ -464,11 +476,11 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
 <!-- PRICING -->
 <section id="pricing" class="section" aria-labelledby="pricing-h2">
   <div class="container">
-    <p class="pricing-save" aria-hidden="true">&#9733; Pure Care Plans &#9733;</p>
-    <h2 id="pricing-h2" class="pricing-subtitle">Win your home once. Keep it clean forever.</h2>
+    <p class="pricing-save" aria-hidden="true">★ Save Big ★</p>
+    <p class="pricing-subtitle" id="pricing-h2">Bundle your services and save with our recurring care plans</p>
 
     <div class="video-thumb" role="region" aria-label="Service overview video">
-      <div class="video-bg" role="img" aria-label="Pure Exterior Home Solutions overview video thumbnail" style="background-image:url('images/img2_video-thumbnail.jpg')"></div>
+      <div class="video-bg" role="img" aria-label="Pure Exterior Home Solutions overview video thumbnail"></div>
       <div class="play-btn" aria-label="Play video">
         <div class="play-circle">
           <svg viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
@@ -480,60 +492,38 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
 
       <article class="pricing-card">
         <p class="pricing-tier">One-Time Service</p>
-        <p class="pricing-value" style="font-size:2rem;">&#192; La Carte</p>
-        <p class="pricing-value-label">No contract &mdash; book anytime</p>
+        <p class="pricing-value">À La Carte</p>
+        <p class="pricing-value-label">No contract — book anytime</p>
         <ul class="pricing-features">
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>Window washing from $150 (residential)</span></li>
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>Solar panel cleaning from $100</span></li>
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>Pressure washing &amp; surface cleaning from $100</span></li>
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>No commitment &mdash; schedule when you want</span></li>
+          <li><span class="pf-check" aria-hidden="true">✓</span> <span>Window washing from $150 (residential)</span></li>
+          <li><span class="pf-check" aria-hidden="true">✓</span> <span>Solar panel cleaning from $100</span></li>
+          <li><span class="pf-check" aria-hidden="true">✓</span> <span>Pressure washing &amp; surface cleaning from $100</span></li>
         </ul>
         <a href="#quote" class="btn btn-primary" aria-label="Get a one-time service quote">Get Your Quote</a>
       </article>
 
-      <article class="pricing-card featured" aria-label="Most popular plan">
-        <p class="pricing-tier" style="display:flex;align-items:center;gap:8px;">
-          Recurring Plan
-          <span style="background:rgba(255,255,255,0.22);color:#fff;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:50px;">Most Popular</span>
-        </p>
-        <p class="pricing-value">Home Pride Plan</p>
-        <p class="pricing-value-label">Auto-scheduled &mdash; we handle it for you</p>
-        <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:4px;">
-          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.6rem;color:#fff;line-height:1;">~$55</span>
-          <span style="font-size:0.9rem;color:rgba(255,255,255,0.8);">&nbsp;/ month</span>
-        </div>
-        <p class="pricing-value-label" style="margin-bottom:20px;">Save ~20% vs. individual pricing</p>
+      <article class="pricing-card featured">
+        <p class="pricing-tier">Quarterly Package</p>
+        <p class="pricing-value">Save 15%</p>
+        <p class="pricing-value-label">Vs. individual service pricing</p>
         <ul class="pricing-features">
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>2&times; exterior window washings per year (spring &amp; fall)</span></li>
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>Screen cleaning included with every visit</span></li>
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>Free touch-ups between scheduled cleanings*</span></li>
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>Priority scheduling &mdash; booked before non-members</span></li>
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>Same crew every visit, documented property notes</span></li>
+          <li><span class="pf-check" aria-hidden="true">✓</span> <span>Window wash + surface clean every quarter</span></li>
+          <li><span class="pf-check" aria-hidden="true">✓</span> <span>Discounted bundled rate — automatic savings</span></li>
+          <li><span class="pf-check" aria-hidden="true">✓</span> <span>Priority scheduling &amp; same-crew consistency</span></li>
         </ul>
-        <a href="#quote" class="btn btn-primary" style="background:var(--white);color:var(--blue) !important;" aria-label="Start the Home Pride recurring plan">Start My Plan</a>
-        <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);text-align:center;margin-top:12px;">Billed monthly &nbsp;&middot;&nbsp; cancel anytime</p>
-        <p style="font-size:0.72rem;color:rgba(255,255,255,0.45);text-align:center;margin-top:6px;">*Touch-ups subject to availability; excludes full re-cleans</p>
+        <a href="#quote" class="btn btn-primary" aria-label="Get a quarterly package quote">Get Your Quote</a>
       </article>
 
       <article class="pricing-card">
-        <p class="pricing-tier">Premium &mdash; Solar Owners</p>
-        <p class="pricing-value" style="font-size:1.85rem;line-height:1.1;">Solar + Home Plan</p>
-        <p class="pricing-value-label">Protect your panels. Maximize your output.</p>
-        <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:4px;">
-          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.6rem;color:var(--blue);line-height:1;">~$85</span>
-          <span style="font-size:0.9rem;color:#999;">&nbsp;/ month</span>
-        </div>
-        <p class="pricing-value-label" style="margin-bottom:20px;">Best value for solar homeowners</p>
+        <p class="pricing-tier">Annual Solar Care</p>
+        <p class="pricing-value">2× Per Year</p>
+        <p class="pricing-value-label">Billed monthly — cancel anytime</p>
         <ul class="pricing-features">
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>2&times; exterior window washings per year</span></li>
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>2&times; professional solar panel cleanings (DI/RO pure water)</span></li>
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>Screen cleaning included with every visit</span></li>
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>Priority scheduling + same-crew consistency</span></li>
-          <li><span class="pf-check" aria-hidden="true">&#10003;</span> <span>Annual panel condition check-in</span></li>
+          <li><span class="pf-check" aria-hidden="true">✓</span> <span>Two professional solar panel cleanings annually</span></li>
+          <li><span class="pf-check" aria-hidden="true">✓</span> <span>DI/RO pure water — streak-free guaranteed</span></li>
+          <li><span class="pf-check" aria-hidden="true">✓</span> <span>Maximize energy output year-round</span></li>
         </ul>
-        <a href="#quote" class="btn btn-primary" aria-label="Start the Solar and Home recurring plan">Start My Plan</a>
-        <p style="font-size:0.78rem;color:#bbb;text-align:center;margin-top:12px;">Billed monthly &nbsp;&middot;&nbsp; cancel anytime</p>
-        <p style="font-size:0.72rem;color:#ccc;text-align:center;margin-top:6px;">*Touch-ups subject to availability; excludes full re-cleans</p>
+        <a href="#quote" class="btn btn-primary" aria-label="Get an annual solar care plan quote">Get Your Quote</a>
       </article>
 
     </div>
@@ -550,10 +540,10 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
     <div class="reviews-meta">
       <p class="rating-num" aria-label="5.0 rating">5.0</p>
       <div class="rating-detail">
-        <div class="stars-gold" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="stars-gold" aria-hidden="true">★★★★★</div>
         <p class="rating-count">Based on Google Reviews</p>
       </div>
-      <a href="https://www.google.com/search?q=Pure+Exterior+Home+Solutions+reviews" target="_blank" rel="noopener" class="share-btn" aria-label="Leave a Google review">Share Your Review</a>
+      <a href="[PLACEHOLDER_GOOGLE_REVIEW_URL]" target="_blank" rel="noopener" class="share-btn" aria-label="Leave a Google review">Share Your Review</a>
     </div>
     <div class="reviews-grid">
 
@@ -565,9 +555,9 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
             <p class="reviewer-loc">Davis County, UT</p>
           </div>
         </div>
-        <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">Amazing job on our windows and solar panels. The results were spotless &mdash; our panels are producing better than ever! The crew was professional, efficient, and respectful of our property.</p>
-        <a href="https://www.google.com/search?q=Pure+Exterior+Home+Solutions+reviews" class="review-more" target="_blank" rel="noopener">See more</a>
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <p class="review-text">Amazing job on our windows and solar panels. The results were spotless — our panels are producing better than ever! The crew was professional, efficient, and respectful of our property.</p>
+        <a href="[PLACEHOLDER_GOOGLE_REVIEW_URL]" class="review-more" target="_blank" rel="noopener">See more</a>
       </article>
 
       <article class="review-card">
@@ -578,9 +568,9 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
             <p class="reviewer-loc">Salt Lake County, UT</p>
           </div>
         </div>
-        <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
         <p class="review-text">Best pressure washing in Utah. They removed driveway stains I thought were permanent. Honest pricing, showed up exactly when they said, and the results were incredible. Highly recommend!</p>
-        <a href="https://www.google.com/search?q=Pure+Exterior+Home+Solutions+reviews" class="review-more" target="_blank" rel="noopener">See more</a>
+        <a href="[PLACEHOLDER_GOOGLE_REVIEW_URL]" class="review-more" target="_blank" rel="noopener">See more</a>
       </article>
 
       <article class="review-card">
@@ -591,12 +581,73 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
             <p class="reviewer-loc">Bountiful, UT</p>
           </div>
         </div>
-        <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">Used Pure for our new build post-construction clean. Absolutely flawless windows &mdash; crystal clear every pane. Their pure water system is genuinely impressive. Will absolutely use them again!</p>
-        <a href="https://www.google.com/search?q=Pure+Exterior+Home+Solutions+reviews" class="review-more" target="_blank" rel="noopener">See more</a>
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <p class="review-text">Used Pure for our new build post-construction clean. Absolutely flawless windows — crystal clear every pane. Their pure water system is genuinely impressive. Will absolutely use them again!</p>
+        <a href="[PLACEHOLDER_GOOGLE_REVIEW_URL]" class="review-more" target="_blank" rel="noopener">See more</a>
       </article>
 
     </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" aria-labelledby="process-h2">
+  <div class="container">
+    <header class="section-header">
+      <span class="eyebrow" style="color:var(--blue)">How It Works</span>
+      <h2 id="process-h2" class="display display-md">Our 4-Step Process</h2>
+    </header>
+    <p class="process-sub">Simple. Transparent. Exceptional results — every time.</p>
+  </div>
+  <div class="process-steps">
+
+    <div class="process-step">
+      <div class="step-photo" aria-hidden="true">
+        <div class="step-photo-bg" style="background-image:url('[PLACEHOLDER_STEP1]')"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-num" aria-hidden="true">1</div>
+        <h3 class="step-title">Get Your Quote</h3>
+        <p class="step-desc">Tell us about your property and the services you need. We provide honest, transparent quotes — no hidden fees, no surprises. Request online in minutes or give us a call and we'll respond fast.</p>
+      </div>
+    </div>
+
+    <div class="process-step">
+      <div class="step-photo" aria-hidden="true">
+        <div class="step-photo-bg" style="background-image:url('[PLACEHOLDER_STEP2]')"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-num" aria-hidden="true">2</div>
+        <h3 class="step-title">Schedule Service</h3>
+        <p class="step-desc">Book a time that works for you through our easy online scheduling system. We confirm your appointment and show up on time, fully equipped with commercial-grade tools and ready to work.</p>
+      </div>
+    </div>
+
+    <div class="process-step">
+      <div class="step-photo" aria-hidden="true">
+        <div class="step-photo-bg" style="background-image:url('[PLACEHOLDER_STEP3]')"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-num" aria-hidden="true">3</div>
+        <h3 class="step-title">We Clean &amp; Restore</h3>
+        <p class="step-desc">Our trained technicians use commercial DI/RO pure water systems and 3,500 PSI hot-water pressure washing to deliver streak-free, exceptional results on windows, solar panels, driveways, and surfaces.</p>
+      </div>
+    </div>
+
+    <div class="process-step">
+      <div class="step-photo" aria-hidden="true">
+        <div class="step-photo-bg" style="background-image:url('[PLACEHOLDER_STEP4]')"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-num" aria-hidden="true">4</div>
+        <h3 class="step-title">You Love It</h3>
+        <p class="step-desc">We document before and after every job. If you're not completely satisfied, we make it right. Most customers become repeat clients — and our bundled care plans make it easy and affordable to stay that way.</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="process-cta-wrap container">
+    <a href="#quote" class="btn btn-primary btn-lg" aria-label="Get started with Pure Exterior Home Solutions">Get Started Today &nbsp;→</a>
   </div>
 </section>
 
@@ -609,12 +660,12 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
     </div>
     <p class="social-italic">Before &amp; after transformations across Davis &amp; Salt Lake County</p>
     <div class="photo-strip" aria-label="Social media photo gallery" role="list">
-      <div class="strip-photo" style="background-image:url('images/img2_social-1.jpg')" role="img" aria-label="Pure Exterior team washing windows on a residential home" tabindex="0"></div>
-      <div class="strip-photo" style="background-image:url('images/img2_social-2.jpg')" role="img" aria-label="Pure Exterior technician cleaning window screens with professional equipment" tabindex="0"></div>
-      <div class="strip-photo" style="background-image:url('images/img2_social-3.jpg')" role="img" aria-label="Pure Exterior technician washing large windows on a covered patio" tabindex="0"></div>
-      <div class="strip-photo" style="background-image:url('images/img2_social-4.jpg')" role="img" aria-label="Pure Exterior technician scrubbing a window with pure water system" tabindex="0"></div>
-      <div class="strip-photo" style="background-image:url('images/img2_social-5.jpg')" role="img" aria-label="Exterior cleaning project photo 5" tabindex="0"></div>
-      <div class="strip-photo" style="background-image:url('images/img2_social-6.jpg')" role="img" aria-label="Exterior cleaning project photo 6" tabindex="0"></div>
+      <div class="strip-photo" style="background-image:url('[PLACEHOLDER_SOCIAL_1]')" role="img" aria-label="Exterior cleaning project photo 1" tabindex="0"></div>
+      <div class="strip-photo" style="background-image:url('[PLACEHOLDER_SOCIAL_2]')" role="img" aria-label="Exterior cleaning project photo 2" tabindex="0"></div>
+      <div class="strip-photo" style="background-image:url('[PLACEHOLDER_SOCIAL_3]')" role="img" aria-label="Exterior cleaning project photo 3" tabindex="0"></div>
+      <div class="strip-photo" style="background-image:url('[PLACEHOLDER_SOCIAL_4]')" role="img" aria-label="Exterior cleaning project photo 4" tabindex="0"></div>
+      <div class="strip-photo" style="background-image:url('[PLACEHOLDER_SOCIAL_5]')" role="img" aria-label="Exterior cleaning project photo 5" tabindex="0"></div>
+      <div class="strip-photo" style="background-image:url('[PLACEHOLDER_SOCIAL_6]')" role="img" aria-label="Exterior cleaning project photo 6" tabindex="0"></div>
     </div>
     <div class="social-icons-row">
       <a href="https://www.facebook.com/pureexteriorhomesolutions" target="_blank" rel="noopener" class="si-link" aria-label="Pure Exterior Home Solutions on Facebook">
@@ -637,7 +688,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
       <span class="eyebrow">Where We Work</span>
       <h2 id="areas-h2" class="display display-md">Proudly Serving</h2>
     </header>
-    <p class="areas-sub">Professional exterior home solutions across Davis &amp; Salt Lake Counties &mdash; Utah's fastest-growing communities.</p>
+    <p class="areas-sub">Professional exterior home solutions across Davis &amp; Salt Lake Counties — Utah's fastest-growing communities.</p>
     <div class="areas-grid">
 
       <div class="area-block">
@@ -648,16 +699,16 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
           <p class="area-name">Davis County</p>
           <div class="accordion-group">
             <div class="acc-item">
-              <button class="acc-btn open" aria-expanded="true" data-target="dc1">Bountiful &amp; North Salt Lake <span class="acc-chevron" aria-hidden="true">&#9660;</span></button>
-              <div class="acc-body show" id="dc1">Bountiful &middot; North Salt Lake &middot; Woods Cross &middot; Centerville</div>
+              <button class="acc-btn open" aria-expanded="true" data-target="dc1">Bountiful &amp; North Salt Lake <span class="acc-chevron" aria-hidden="true">▼</span></button>
+              <div class="acc-body show" id="dc1">Bountiful · North Salt Lake · Woods Cross · Centerville</div>
             </div>
             <div class="acc-item">
-              <button class="acc-btn" aria-expanded="false" data-target="dc2">Farmington &amp; Kaysville <span class="acc-chevron" aria-hidden="true">&#9660;</span></button>
-              <div class="acc-body" id="dc2">Farmington &middot; Kaysville &middot; Layton &middot; Sunset</div>
+              <button class="acc-btn" aria-expanded="false" data-target="dc2">Farmington &amp; Kaysville <span class="acc-chevron" aria-hidden="true">▼</span></button>
+              <div class="acc-body" id="dc2">Farmington · Kaysville · Layton · Sunset</div>
             </div>
             <div class="acc-item">
-              <button class="acc-btn" aria-expanded="false" data-target="dc3">Syracuse &amp; Clinton <span class="acc-chevron" aria-hidden="true">&#9660;</span></button>
-              <div class="acc-body" id="dc3">Syracuse &middot; Clinton &middot; West Point &middot; Roy &middot; Clearfield</div>
+              <button class="acc-btn" aria-expanded="false" data-target="dc3">Syracuse &amp; Clinton <span class="acc-chevron" aria-hidden="true">▼</span></button>
+              <div class="acc-body" id="dc3">Syracuse · Clinton · West Point · Roy · Clearfield</div>
             </div>
           </div>
         </div>
@@ -671,16 +722,16 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
           <p class="area-name">Salt Lake County</p>
           <div class="accordion-group">
             <div class="acc-item">
-              <button class="acc-btn open" aria-expanded="true" data-target="slc1">Salt Lake City &amp; Central <span class="acc-chevron" aria-hidden="true">&#9660;</span></button>
-              <div class="acc-body show" id="slc1">Salt Lake City &middot; Murray &middot; Millcreek &middot; Holladay</div>
+              <button class="acc-btn open" aria-expanded="true" data-target="slc1">Salt Lake City &amp; Central <span class="acc-chevron" aria-hidden="true">▼</span></button>
+              <div class="acc-body show" id="slc1">Salt Lake City · Murray · Millcreek · Holladay</div>
             </div>
             <div class="acc-item">
-              <button class="acc-btn" aria-expanded="false" data-target="slc2">Sandy &amp; South County <span class="acc-chevron" aria-hidden="true">&#9660;</span></button>
-              <div class="acc-body" id="slc2">Sandy &middot; South Jordan &middot; Draper &middot; Riverton &middot; Herriman</div>
+              <button class="acc-btn" aria-expanded="false" data-target="slc2">Sandy &amp; South County <span class="acc-chevron" aria-hidden="true">▼</span></button>
+              <div class="acc-body" id="slc2">Sandy · South Jordan · Draper · Riverton · Herriman</div>
             </div>
             <div class="acc-item">
-              <button class="acc-btn" aria-expanded="false" data-target="slc3">West Valley &amp; Taylorsville <span class="acc-chevron" aria-hidden="true">&#9660;</span></button>
-              <div class="acc-body" id="slc3">West Valley City &middot; Taylorsville &middot; West Jordan &middot; Magna &middot; Kearns</div>
+              <button class="acc-btn" aria-expanded="false" data-target="slc3">West Valley &amp; Taylorsville <span class="acc-chevron" aria-hidden="true">▼</span></button>
+              <div class="acc-body" id="slc3">West Valley City · Taylorsville · West Jordan · Magna · Kearns</div>
             </div>
           </div>
         </div>
@@ -697,11 +748,11 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
       <div>
         <blockquote>"Honestly the best exterior cleaning service we've found in Davis County. Spotless windows, incredible pressure washing results, and our solar panels are producing better than ever. The crew was professional, punctual, and left our property cleaner than expected."</blockquote>
         <div class="testi-attr">
-          <span class="testi-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span class="testi-name">&mdash; Happy Homeowner, Bountiful, UT</span>
+          <span class="testi-stars" aria-label="5 stars">★★★★★</span>
+          <span class="testi-name">— Happy Homeowner, Bountiful, UT</span>
         </div>
       </div>
-      <div class="testi-qmark" aria-hidden="true">&ldquo;</div>
+      <div class="testi-qmark" aria-hidden="true">"</div>
     </div>
   </div>
 </section>
@@ -712,7 +763,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
     <header class="section-header">
       <span class="eyebrow">Free Quote</span>
       <h2 id="quote-h2" class="display display-sm">Get Your Free Quote</h2>
-      <p style="color:#555;margin-top:12px;font-size:1rem">Tell us about your property &mdash; we'll respond within 24 hours.</p>
+      <p style="color:#555;margin-top:12px;font-size:1rem">Tell us about your property — we'll respond within 24 hours.</p>
     </header>
     <form class="quote-form" id="quote-form" novalidate aria-label="Free quote request form">
       <div class="form-row">
@@ -732,7 +783,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
       <div class="form-group">
         <label for="qservice">Service Needed *</label>
         <select id="qservice" name="service" required aria-required="true">
-          <option value="">Select a service&hellip;</option>
+          <option value="">Select a service…</option>
           <option value="window-washing">Window Washing</option>
           <option value="pressure-washing">Pressure Washing</option>
           <option value="solar-panel-cleaning">Solar Panel Cleaning</option>
@@ -743,9 +794,9 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
       </div>
       <div class="form-group">
         <label for="qmessage">Tell us about your property</label>
-        <textarea id="qmessage" name="message" rows="4" placeholder="Home size, number of windows, special requirements, commercial property details&hellip;"></textarea>
+        <textarea id="qmessage" name="message" rows="4" placeholder="Home size, number of windows, special requirements, commercial property details…"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary btn-lg form-submit" aria-label="Submit free quote request">Request My Free Quote &rarr;</button>
+      <button type="submit" class="btn btn-primary btn-lg form-submit" aria-label="Submit free quote request">Request My Free Quote →</button>
     </form>
   </div>
 </section>
@@ -756,7 +807,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
     <h2 class="display display-md">Ready For a Cleaner Home?</h2>
     <p>Serving Davis &amp; Salt Lake County homeowners and businesses. Honest pricing. Commercial-grade results. Satisfaction guaranteed.</p>
     <div class="cta-btns">
-      <a href="tel:801-500-4545" class="btn btn-primary btn-lg" aria-label="Call Pure Exterior Home Solutions">
+      <a href="tel:[PLACEHOLDER_PHONE]" class="btn btn-primary btn-lg" aria-label="Call Pure Exterior Home Solutions">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
         Call Us Now
       </a>
@@ -794,7 +845,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
           <li><a href="#process">How It Works</a></li>
           <li><a href="#reviews">Customer Reviews</a></li>
           <li><a href="#quote">Get a Free Quote</a></li>
-          <li><a href="tel:801-500-4545">Contact Us</a></li>
+          <li><a href="tel:[PLACEHOLDER_PHONE]">Contact Us</a></li>
         </ul>
       </nav>
 
@@ -823,8 +874,8 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 Pure Exterior Home Solutions LLC &middot; Davis &amp; Salt Lake Counties, Utah &middot; All rights reserved.</p>
-      <p><a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms of Service</a></p>
+      <p>© 2025 Pure Exterior Home Solutions LLC · Davis &amp; Salt Lake Counties, Utah · All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a></p>
     </div>
   </div>
 </footer>
@@ -873,7 +924,7 @@ document.getElementById('quote-form').addEventListener('submit', function(e) {
   e.preventDefault();
   const btn = this.querySelector('button[type=submit]');
   const orig = btn.textContent;
-  btn.textContent = '&#10003; Quote Request Sent!';
+  btn.textContent = '✓ Quote Request Sent!';
   btn.style.background = '#1b8a3f';
   btn.disabled = true;
   setTimeout(() => {
@@ -903,3 +954,4 @@ document.querySelectorAll('.service-card, .pricing-card, .review-card, .step-con
 });
 </script>
 </body>
+</html>
