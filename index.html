@@ -861,19 +861,52 @@ document.querySelectorAll('.acc-btn').forEach(btn => {
 });
 
 // Quote Form
-document.getElementById('quote-form').addEventListener('submit', function(e) {
+document.getElementById('quote-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   const btn = this.querySelector('button[type=submit]');
   const orig = btn.textContent;
-  btn.textContent = '✓ Quote Request Sent!';
-  btn.style.background = '#1b8a3f';
+  btn.textContent = 'Sending…';
   btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = orig;
-    btn.style.background = '';
-    btn.disabled = false;
-    this.reset();
-  }, 4000);
+
+  const formData = new FormData(this);
+  formData.append('access_key', '743a22b1-5357-4f44-90d3-fc81ddfd70cf');
+  formData.append('subject', 'New Quote Request — Pure Exterior Home Solutions');
+  formData.append('from_name', 'Pure Exterior Website');
+  formData.append('replyto', formData.get('email') || '');
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    });
+    const data = await res.json();
+    if (data.success) {
+      btn.textContent = '✓ Quote Request Sent!';
+      btn.style.background = '#1b8a3f';
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.style.background = '';
+        btn.disabled = false;
+        this.reset();
+      }, 4000);
+    } else {
+      btn.textContent = 'Something went wrong — please try again';
+      btn.style.background = '#c0392b';
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    }
+  } catch (err) {
+    btn.textContent = 'Error — please call us directly';
+    btn.style.background = '#c0392b';
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 4000);
+  }
 });
 
 // Scroll-triggered fade in
