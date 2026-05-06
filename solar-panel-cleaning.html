@@ -96,7 +96,6 @@ nav#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding:
 .hero-sub { color: rgba(255,255,255,0.95); font-size: 1.15rem; line-height: 1.65; margin-bottom: 36px; max-width: 520px; text-shadow: 0 1px 4px rgba(0,0,0,0.7); }
 .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
 
-/* ENERGY STATS BAR */
 #stats-bar { background: var(--blue); padding: 28px 0; }
 .stats-items { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; text-align: center; }
 .stat-item { padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.25); }
@@ -200,28 +199,19 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
 .close-menu { position: absolute; top: 18px; right: 20px; background: none; border: none; font-size: 1.8rem; cursor: pointer; color: var(--black); line-height: 1; }
 
 @media (max-width: 1024px) {
-  .detail-grid { grid-template-columns: 1fr; }
-  .detail-photo { height: 340px; }
+  .detail-grid { grid-template-columns: 1fr; } .detail-photo { height: 340px; }
   .benefits-grid { grid-template-columns: 1fr 1fr; }
-  .pricing-cards { grid-template-columns: 1fr 1fr; }
-  .pricing-card.featured { transform: none; }
+  .pricing-cards { grid-template-columns: 1fr 1fr; } .pricing-card.featured { transform: none; }
   .pricing-cards > .pricing-card:last-child { grid-column: 1 / -1; max-width: 380px; margin: 0 auto; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .reviews-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; } .reviews-grid { grid-template-columns: 1fr 1fr; }
   .stats-items { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 16px; }
-  .stat-item:nth-child(2n) { border-right: none; }
 }
 @media (max-width: 768px) {
-  .section { padding: 64px 0; }
-  .nav-links, .nav-actions { display: none; }
-  .hamburger { display: flex; }
-  .benefits-grid { grid-template-columns: 1fr; }
-  .pricing-cards { grid-template-columns: 1fr; }
-  .reviews-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .hero-btns { flex-direction: column; align-items: flex-start; }
+  .section { padding: 64px 0; } .nav-links, .nav-actions { display: none; } .hamburger { display: flex; }
+  .benefits-grid { grid-template-columns: 1fr; } .pricing-cards { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; } .hero-btns { flex-direction: column; align-items: flex-start; }
   .stats-items { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } }
@@ -232,9 +222,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
 <nav id="navbar" aria-label="Primary navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Pure Exterior Home Solutions home">
-      <div class="nav-logo-mark" aria-hidden="true">
-        <svg width="22" height="22" viewBox="0 0 100 100" fill="none"><path d="M20 15L20 85L36 85L36 60C46 60 72 62 72 42C72 22 56 15 36 15Z M36 30L52 30C62 30 56 50 36 48Z" fill="#29ABE2"/></svg>
-      </div>
+      <div class="nav-logo-mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 100 100" fill="none"><path d="M20 15L20 85L36 85L36 60C46 60 72 62 72 42C72 22 56 15 36 15Z M36 30L52 30C62 30 56 50 36 48Z" fill="#29ABE2"/></svg></div>
       <div class="nav-logo-text"><span>Pure</span>Exterior Home Solutions</div>
     </a>
     <ul class="nav-links">
@@ -245,10 +233,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
       <li><a href="index.html#areas">Service Areas</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="tel:8015004545" class="btn btn-primary">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-        Call Us
-      </a>
+      <a href="tel:8015004545" class="btn btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Call Us</a>
       <a href="#quote" class="nav-quote">Get a quote</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -278,7 +263,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
         <strong>5 Stars on</strong>
         <span style="font-weight:800;font-size:1rem;"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
       </div>
-      <h1 id="hero-heading" class="display display-lg">Maximize Your<br><span style="color:#29ABE2">Solar</span><br>Output</h1>
+      <h1 id="hero-heading" class="display display-lg" style="color: #FFFFFF;">Maximize Your<br><span style="color:#29ABE2">Solar</span><br>Output</h1>
       <p class="hero-sub">Dirty panels lose up to 25% efficiency. Our DI/RO pure water system restores your panels to peak performance — no streaks, no residue, no risk to your investment.</p>
       <div class="hero-btns">
         <a href="#quote" class="btn btn-primary btn-lg">Get Your Free Quote &nbsp;→</a>
@@ -288,26 +273,13 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
   </div>
 </section>
 
-<!-- STATS BAR -->
 <div id="stats-bar" aria-label="Solar panel cleaning impact">
   <div class="container">
     <div class="stats-items">
-      <div class="stat-item">
-        <p class="stat-num">25%</p>
-        <p class="stat-label">Energy output lost from dirty panels</p>
-      </div>
-      <div class="stat-item">
-        <p class="stat-num">99%</p>
-        <p class="stat-label">Minerals removed by our DI/RO system</p>
-      </div>
-      <div class="stat-item">
-        <p class="stat-num">2×</p>
-        <p class="stat-label">Annual cleanings recommended for Utah</p>
-      </div>
-      <div class="stat-item">
-        <p class="stat-num">$100</p>
-        <p class="stat-label">Starting price for residential panels</p>
-      </div>
+      <div class="stat-item"><p class="stat-num">25%</p><p class="stat-label">Energy output lost from dirty panels</p></div>
+      <div class="stat-item"><p class="stat-num">99%</p><p class="stat-label">Minerals removed by our DI/RO system</p></div>
+      <div class="stat-item"><p class="stat-num">2×</p><p class="stat-label">Annual cleanings recommended for Utah</p></div>
+      <div class="stat-item"><p class="stat-num">$100</p><p class="stat-label">Starting price for residential panels</p></div>
     </div>
   </div>
 </div>
@@ -315,9 +287,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
 <section id="detail" class="section" aria-labelledby="detail-h2">
   <div class="container">
     <div class="detail-grid">
-      <div class="detail-photo">
-        <img src="images/img2_solar-panel.jpg" alt="Professional solar panel cleaning in Davis County Utah" loading="lazy">
-      </div>
+      <div class="detail-photo"><img src="images/img2_solar-panel.jpg" alt="Professional solar panel cleaning in Davis County Utah" loading="lazy"></div>
       <div class="detail-text">
         <span class="eyebrow">Solar Panel Cleaning</span>
         <h2 id="detail-h2" class="display display-md" style="margin-top:12px;">Peak Power. Every Season.</h2>
@@ -344,36 +314,12 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
       <h2 id="benefits-h2" class="display display-md">The Solar Difference</h2>
     </header>
     <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-icon">☀️</div>
-        <h3>Restore Lost Output</h3>
-        <p>Dirty panels block sunlight before it reaches the photovoltaic cells. Professional cleaning restores full light absorption — recovering up to 25% of lost energy generation and improving your ROI.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">💧</div>
-        <h3>Pure Water System</h3>
-        <p>Our DI/RO system removes 99% of minerals from water. Tap water leaves calcium and mineral deposits on panels that permanently reduce output. Our pure water dries spotless every time.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🛡️</div>
-        <h3>Warranty Safe</h3>
-        <p>We use only manufacturer-approved, non-abrasive cleaning methods. No harsh chemicals, no high-pressure sprays that could damage seals or void your panel warranty. Safe for all brands.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">📅</div>
-        <h3>Annual Care Plans</h3>
-        <p>We offer annual solar cleaning plans — two cleanings per year (spring and fall) at a discounted rate. Set it once, and we'll handle the scheduling so your panels are always at peak output.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">💰</div>
-        <h3>Transparent Pricing</h3>
-        <p>From $100 for residential panels. We price per panel array, not by the hour — so you know exactly what you'll pay before we start. No surprises, no hidden fees.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">⭐</div>
-        <h3>5-Star Results</h3>
-        <p>Our work is guaranteed. If you're not 100% satisfied with the results, we'll come back and make it right at no charge. Your investment in solar deserves the best maintenance.</p>
-      </div>
+      <div class="benefit-card"><div class="benefit-icon">☀️</div><h3>Restore Lost Output</h3><p>Dirty panels block sunlight before it reaches the photovoltaic cells. Professional cleaning restores full light absorption — recovering up to 25% of lost energy generation and improving your ROI.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">💧</div><h3>Pure Water System</h3><p>Our DI/RO system removes 99% of minerals from water. Tap water leaves calcium and mineral deposits on panels that permanently reduce output. Our pure water dries spotless every time.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">🛡️</div><h3>Warranty Safe</h3><p>We use only manufacturer-approved, non-abrasive cleaning methods. No harsh chemicals, no high-pressure sprays that could damage seals or void your panel warranty. Safe for all brands.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">📅</div><h3>Annual Care Plans</h3><p>We offer annual solar cleaning plans — two cleanings per year (spring and fall) at a discounted rate. Set it once, and we'll handle the scheduling so your panels are always at peak output.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">💰</div><h3>Transparent Pricing</h3><p>From $100 for residential panels. We price per panel array, not by the hour — so you know exactly what you'll pay before we start. No surprises, no hidden fees.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">⭐</div><h3>5-Star Results</h3><p>Our work is guaranteed. If you're not 100% satisfied with the results, we'll come back and make it right at no charge. Your investment in solar deserves the best maintenance.</p></div>
     </div>
   </div>
 </section>
@@ -387,9 +333,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
     </header>
     <div class="pricing-cards">
       <div class="pricing-card">
-        <p class="pricing-tier">One-Time</p>
-        <p class="pricing-value">$100+</p>
-        <p class="pricing-value-label">Residential starting rate</p>
+        <p class="pricing-tier">One-Time</p><p class="pricing-value">$100+</p><p class="pricing-value-label">Residential starting rate</p>
         <ul class="pricing-features">
           <li><span class="pf-check">✓</span> <span>Full panel surface cleaning</span></li>
           <li><span class="pf-check">✓</span> <span>Pure water DI/RO system</span></li>
@@ -399,9 +343,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
         <a href="#quote" class="btn btn-primary">Get a Quote</a>
       </div>
       <div class="pricing-card featured">
-        <p class="pricing-tier">Annual Solar Plan</p>
-        <p class="pricing-value">Save 15%</p>
-        <p class="pricing-value-label">Two cleanings per year</p>
+        <p class="pricing-tier">Annual Solar Plan</p><p class="pricing-value">Save 15%</p><p class="pricing-value-label">Two cleanings per year</p>
         <ul class="pricing-features">
           <li><span class="pf-check">✓</span> <span>Spring &amp; fall solar cleaning</span></li>
           <li><span class="pf-check">✓</span> <span>Priority scheduling</span></li>
@@ -411,9 +353,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
         <a href="#quote" class="btn btn-primary">Get a Quote</a>
       </div>
       <div class="pricing-card">
-        <p class="pricing-tier">Commercial</p>
-        <p class="pricing-value">Custom</p>
-        <p class="pricing-value-label">Large arrays &amp; businesses</p>
+        <p class="pricing-tier">Commercial</p><p class="pricing-value">Custom</p><p class="pricing-value-label">Large arrays &amp; businesses</p>
         <ul class="pricing-features">
           <li><span class="pf-check">✓</span> <span>Commercial solar arrays</span></li>
           <li><span class="pf-check">✓</span> <span>Recurring service contracts</span></li>
@@ -433,26 +373,11 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
       <h2 id="faq-h2" class="display display-md">Solar Panel Cleaning FAQ</h2>
     </header>
     <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-btn" data-target="faq1" aria-expanded="false">Does it actually make a difference to clean solar panels?<span class="faq-chevron">+</span></button>
-        <div class="faq-body" id="faq1">Yes — significantly. Studies from NREL and major solar manufacturers show that dirty panels can lose 15–25% of their energy generating capacity. In Utah's dusty, pollen-heavy environment, this loss can happen faster than in coastal areas. A single cleaning can restore your panels to full output and meaningfully reduce your electricity bills.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" data-target="faq2" aria-expanded="false">Won't rain clean my solar panels naturally?<span class="faq-chevron">+</span></button>
-        <div class="faq-body" id="faq2">Rain helps with loose dust, but it doesn't remove bird droppings, pollen, or mineral deposits — and Utah's intermittent rainfall isn't enough to keep panels consistently clean. More importantly, tap water (including rainwater in Utah) contains dissolved minerals. When it dries, it leaves calcium and mineral deposits that build up over time, permanently reducing output unless professionally cleaned.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" data-target="faq3" aria-expanded="false">How often should I clean my solar panels in Utah?<span class="faq-chevron">+</span></button>
-        <div class="faq-body" id="faq3">We recommend at least twice per year for Utah homeowners — once in spring to clear winter grime and pollen buildup, and once in fall before the shorter winter days. If you live near agriculture, construction, or a major road, more frequent cleanings may be worthwhile. Our annual solar plan covers both visits at a discounted rate.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" data-target="faq4" aria-expanded="false">Will cleaning damage my panels or void the warranty?<span class="faq-chevron">+</span></button>
-        <div class="faq-body" id="faq4">Not with our methods. We use soft brushes, low-pressure pure water, and zero harsh chemicals — the exact approach recommended by major panel manufacturers including LG, SunPower, Tesla, and Panasonic. We never use high-pressure sprays or abrasive tools that could scratch panels or damage seals. Our cleaning is safe for all residential solar systems and won't void your warranty.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" data-target="faq5" aria-expanded="false">How long does solar panel cleaning take?<span class="faq-chevron">+</span></button>
-        <div class="faq-body" id="faq5">Most residential solar cleaning jobs take 30–90 minutes depending on your system size and roof accessibility. We can often combine solar panel cleaning with a window washing visit to save you time and offer a bundled discount. Ask about our combo packages when you request your quote.</div>
-      </div>
+      <div class="faq-item"><button class="faq-btn" data-target="faq1" aria-expanded="false">Does it actually make a difference to clean solar panels?<span class="faq-chevron">+</span></button><div class="faq-body" id="faq1">Yes — significantly. Studies from NREL and major solar manufacturers show that dirty panels can lose 15–25% of their energy generating capacity. In Utah's dusty, pollen-heavy environment, this loss can happen faster than in coastal areas. A single cleaning can restore your panels to full output and meaningfully reduce your electricity bills.</div></div>
+      <div class="faq-item"><button class="faq-btn" data-target="faq2" aria-expanded="false">Won't rain clean my solar panels naturally?<span class="faq-chevron">+</span></button><div class="faq-body" id="faq2">Rain helps with loose dust, but it doesn't remove bird droppings, pollen, or mineral deposits — and Utah's intermittent rainfall isn't enough to keep panels consistently clean. More importantly, tap water (including rainwater in Utah) contains dissolved minerals. When it dries, it leaves calcium and mineral deposits that build up over time, permanently reducing output unless professionally cleaned.</div></div>
+      <div class="faq-item"><button class="faq-btn" data-target="faq3" aria-expanded="false">How often should I clean my solar panels in Utah?<span class="faq-chevron">+</span></button><div class="faq-body" id="faq3">We recommend at least twice per year for Utah homeowners — once in spring to clear winter grime and pollen buildup, and once in fall before the shorter winter days. If you live near agriculture, construction, or a major road, more frequent cleanings may be worthwhile. Our annual solar plan covers both visits at a discounted rate.</div></div>
+      <div class="faq-item"><button class="faq-btn" data-target="faq4" aria-expanded="false">Will cleaning damage my panels or void the warranty?<span class="faq-chevron">+</span></button><div class="faq-body" id="faq4">Not with our methods. We use soft brushes, low-pressure pure water, and zero harsh chemicals — the exact approach recommended by major panel manufacturers including LG, SunPower, Tesla, and Panasonic. We never use high-pressure sprays or abrasive tools that could scratch panels or damage seals. Our cleaning is safe for all residential solar systems and won't void your warranty.</div></div>
+      <div class="faq-item"><button class="faq-btn" data-target="faq5" aria-expanded="false">How long does solar panel cleaning take?<span class="faq-chevron">+</span></button><div class="faq-body" id="faq5">Most residential solar cleaning jobs take 30–90 minutes depending on your system size and roof accessibility. We can often combine solar panel cleaning with a window washing visit to save you time and offer a bundled discount. Ask about our combo packages when you request your quote.</div></div>
     </div>
   </div>
 </section>
@@ -464,30 +389,9 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
       <h2 id="reviews-h2" class="display display-md">Solar Owners Love Us</h2>
     </header>
     <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-header">
-          <div class="avatar">S</div>
-          <div class="reviewer"><h4>Sarah M.</h4><p class="reviewer-loc">Bountiful, UT · Davis County</p></div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">Amazing job on our windows and solar panels. The results were spotless — our panels are producing better than ever! The crew was professional, efficient, and respectful of our property.</p>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <div class="avatar">D</div>
-          <div class="reviewer"><h4>David R.</h4><p class="reviewer-loc">South Jordan, UT · Salt Lake County</p></div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">My solar app showed a 20% improvement in output after Pure Exterior cleaned my panels. I was skeptical at first but the data doesn't lie. Highly recommend their annual plan — best money I've spent on maintenance.</p>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <div class="avatar">A</div>
-          <div class="reviewer"><h4>Amy K.</h4><p class="reviewer-loc">Kaysville, UT · Davis County</p></div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">Our solar panels looked horrible — covered in bird droppings and mineral buildup. Pure Exterior had them looking brand new in under an hour. Honest pricing, no surprises. Signed up for their annual plan!</p>
-      </div>
+      <div class="review-card"><div class="review-header"><div class="avatar">S</div><div class="reviewer"><h4>Sarah M.</h4><p class="reviewer-loc">Bountiful, UT · Davis County</p></div></div><div class="review-stars">★★★★★</div><p class="review-text">Amazing job on our windows and solar panels. The results were spotless — our panels are producing better than ever! The crew was professional, efficient, and respectful of our property.</p></div>
+      <div class="review-card"><div class="review-header"><div class="avatar">D</div><div class="reviewer"><h4>David R.</h4><p class="reviewer-loc">South Jordan, UT · Salt Lake County</p></div></div><div class="review-stars">★★★★★</div><p class="review-text">My solar app showed a 20% improvement in output after Pure Exterior cleaned my panels. I was skeptical at first but the data doesn't lie. Highly recommend their annual plan — best money I've spent on maintenance.</p></div>
+      <div class="review-card"><div class="review-header"><div class="avatar">A</div><div class="reviewer"><h4>Amy K.</h4><p class="reviewer-loc">Kaysville, UT · Davis County</p></div></div><div class="review-stars">★★★★★</div><p class="review-text">Our solar panels looked horrible — covered in bird droppings and mineral buildup. Pure Exterior had them looking brand new in under an hour. Honest pricing, no surprises. Signed up for their annual plan!</p></div>
     </div>
   </div>
 </section>
