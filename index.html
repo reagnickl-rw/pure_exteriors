@@ -732,7 +732,7 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
     <header class="section-header">
       <span class="eyebrow">Free Quote</span>
       <h2 id="quote-h2" class="display display-sm">Get Your Free Quote</h2>
-      <p style="color:#555;margin-top:12px;font-size:1rem">Tell us about your property &mdash; we'll respond within 24 hours.</p>
+      <p style="color:#555;margin-top:12px;font-size:1rem">Share your address &mdash; we'll respond within 24 hours.</p>
     </header>
     <form class="quote-form" id="quote-form" novalidate aria-label="Free quote request form">
       <div class="form-row">
@@ -762,8 +762,8 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
         </select>
       </div>
       <div class="form-group">
-        <label for="qmessage">Tell us about your property</label>
-        <textarea id="qmessage" name="message" rows="4" placeholder="Home size, number of windows, special requirements, commercial property details&hellip;"></textarea>
+        <label for="qaddress">Address</label>
+        <input id="qaddress" name="address" type="text" placeholder="123 Main St, City, UT 84000" autocomplete="street-address">
       </div>
       <button type="submit" class="btn btn-primary btn-lg form-submit" aria-label="Submit free quote request">Request My Free Quote &rarr;</button>
     </form>
