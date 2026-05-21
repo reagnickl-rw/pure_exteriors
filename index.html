@@ -191,24 +191,28 @@ nav#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding:
 
 /* ===== REVIEWS ===== */
 #reviews { background: var(--bg-light); }
-.reviews-meta { display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 48px; flex-wrap: wrap; }
-.rating-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 4.5rem; color: var(--black); line-height: 1; }
-.rating-detail { display: flex; flex-direction: column; gap: 4px; }
-.stars-gold { color: var(--gold); font-size: 1.4rem; letter-spacing: 2px; }
-.rating-count { font-size: 0.9rem; color: #777; }
+.reviews-meta { display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; }
 .share-btn { border: 2px solid var(--blue); color: var(--blue); background: transparent; font-weight: 600; font-size: 0.875rem; padding: 0.65rem 1.4rem; border-radius: var(--radius-pill); transition: var(--transition); cursor: pointer; }
 .share-btn:hover { background: var(--blue); color: var(--white); }
-.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.reviews-carousel { position: relative; display: flex; align-items: center; gap: 16px; }
+.carousel-viewport { flex: 1; overflow: hidden; }
+.carousel-track { display: flex; gap: 20px; transition: transform 0.4s ease; align-items: stretch; }
+.carousel-track .review-card { flex: 0 0 calc((100% - 40px) / 3); display: flex; flex-direction: column; }
+.carousel-btn { flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%; background: var(--white); border: 1px solid #e0e8ef; color: var(--blue); box-shadow: var(--shadow-card); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition); padding: 0; }
+.carousel-btn svg { width: 22px; height: 22px; }
+.carousel-btn:hover:not(:disabled) { background: var(--blue); color: var(--white); transform: translateY(-2px); box-shadow: var(--shadow); }
+.carousel-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.carousel-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+
 .review-card { background: var(--white); border-radius: var(--radius-card); padding: 24px; box-shadow: var(--shadow-card); transition: var(--transition); }
 .review-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
 .avatar { width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0; background: var(--blue); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--white); font-size: 1.1rem; }
-.reviewer h4 { font-size: 0.95rem; font-weight: 600; color: var(--black); }
+.reviewer h3 { font-size: 0.95rem; font-weight: 600; color: var(--black); }
 .reviewer-loc { font-size: 0.8rem; color: #999; }
 .review-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 10px; }
 .review-text { font-size: 0.9rem; line-height: 1.65; color: var(--body-dark); }
-.review-more { color: var(--blue); font-size: 0.85rem; font-weight: 500; display: inline-block; margin-top: 8px; }
-.review-more:hover { text-decoration: underline; }
 
 /* ===== PROCESS ===== */
 #process { background: var(--bg-dark); padding: 96px 0; }
@@ -340,7 +344,11 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
   .service-card-desc { max-height: 80px; opacity: 1; }
   .pricing-cards { grid-template-columns: 1fr; }
 
-  .reviews-grid { grid-template-columns: 1fr; }
+  .reviews-carousel .carousel-btn { display: none; }
+  .carousel-viewport { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .carousel-viewport::-webkit-scrollbar { display: none; }
+  .carousel-track { transform: none !important; }
+  .carousel-track .review-card { flex: 0 0 86%; scroll-snap-align: start; }
   .process-step { grid-template-columns: 1fr; }
   .process-step:nth-child(even) > :first-child,
   .process-step:nth-child(even) > :last-child { order: unset; }
@@ -568,8 +576,91 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
     <div class="reviews-meta">
       <a href="https://g.page/r/CeESHWcaA55MEBM/review" target="_blank" rel="noopener" class="share-btn" aria-label="Leave a Google review">Share Your Review</a>
     </div>
-    <div class="reviews-widget">
-      <script src="https://reputationasknicely.com/static/showcase/carousel.js" data-widget="adf7d9a7-9bf8-4454-bf03-e92d4ce5fb2a" async></script>
+
+    <div class="reviews-carousel" role="region" aria-roledescription="carousel" aria-label="Customer reviews">
+      <button type="button" class="carousel-btn carousel-prev" aria-label="Show previous reviews">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+
+          <article class="review-card">
+            <div class="review-header">
+              <div class="avatar" aria-hidden="true">S</div>
+              <div class="reviewer">
+                <h3>Scott M.</h3>
+                <p class="reviewer-loc">via Google</p>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">Great job with quick service and a fantastic value. Highly recommend for cleaning windows and pressure washing patios and driveways!</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-header">
+              <div class="avatar" aria-hidden="true">A</div>
+              <div class="reviewer">
+                <h3>Alexia O.</h3>
+                <p class="reviewer-loc">via Google</p>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">Very professional and kind, worked with our schedule, great price for great work. Definitely recommend them!</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-header">
+              <div class="avatar" aria-hidden="true">T</div>
+              <div class="reviewer">
+                <h3>Taunie R.</h3>
+                <p class="reviewer-loc">via Google</p>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">Fast and thorough. Did a fantastic job. Accommodating and respectful. Windows look great!</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-header">
+              <div class="avatar" aria-hidden="true">C</div>
+              <div class="reviewer">
+                <h3>Cali P.</h3>
+                <p class="reviewer-loc">via Google</p>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">Great experience with this company! They came out for a quote and returned the same night to clean all of my windows and screens. Some of our windows are very high up and difficult to access, but they handled everything with ease and did an amazing job. My only complaint isn't even on them &#128521; The outside looked so good afterward that I spent the next two days cleaning the inside of my windows and shutters to match! Highly recommend.</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-header">
+              <div class="avatar" aria-hidden="true">A</div>
+              <div class="reviewer">
+                <h3>Ashton C.</h3>
+                <p class="reviewer-loc">via Google</p>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">Pure did an awesome job on my windows! Would highly recommend and have already recommended them to several others! Will be using them again next time my windows need cleaning!</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-header">
+              <div class="avatar" aria-hidden="true">A</div>
+              <div class="reviewer">
+                <h3>Ashley J.</h3>
+                <p class="reviewer-loc">via Google</p>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">Pure Exterior Home Solutions did a great job cleaning our windows. They showed up on time and were very friendly and informative about what system they were using. They went above and beyond to make sure that we were happy with the way every single window was cleaned.</p>
+          </article>
+
+        </div>
+      </div>
+      <button type="button" class="carousel-btn carousel-next" aria-label="Show next reviews">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
     </div>
   </div>
 </section>
@@ -910,6 +1001,40 @@ document.querySelectorAll('.service-card, .pricing-card, .review-card, .step-con
   el.style.transition = `opacity 0.55s ease ${i * 0.06}s, transform 0.55s ease ${i * 0.06}s`;
   observer.observe(el);
 });
+
+// Reviews carousel
+(function() {
+  const track = document.querySelector('.carousel-track');
+  if (!track) return;
+  const cards = track.querySelectorAll('.review-card');
+  const prevBtn = document.querySelector('.carousel-prev');
+  const nextBtn = document.querySelector('.carousel-next');
+  const mobileMQ = window.matchMedia('(max-width: 768px)');
+  let index = 0;
+
+  function visibleCount() { return mobileMQ.matches ? 1 : 3; }
+  function maxIndex() { return Math.max(0, cards.length - visibleCount()); }
+
+  function update() {
+    if (mobileMQ.matches) {
+      track.style.transform = '';
+      prevBtn.disabled = true;
+      nextBtn.disabled = true;
+      return;
+    }
+    if (index > maxIndex()) index = maxIndex();
+    const gap = parseFloat(getComputedStyle(track).gap) || 20;
+    const offset = index * (cards[0].offsetWidth + gap);
+    track.style.transform = `translateX(-${offset}px)`;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index >= maxIndex();
+  }
+
+  prevBtn.addEventListener('click', () => { if (index > 0) { index--; update(); } });
+  nextBtn.addEventListener('click', () => { if (index < maxIndex()) { index++; update(); } });
+  window.addEventListener('resize', update);
+  update();
+})();
 </script>
 </body>
 </html>
