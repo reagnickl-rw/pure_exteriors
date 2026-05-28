@@ -295,7 +295,11 @@ nav#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding:
 
 /* ===== AREAS ===== */
 #areas { background: var(--white); }
-.areas-sub { text-align: center; color: var(--blue); font-size: 1.05rem; margin-top: -40px; margin-bottom: 56px; }
+.areas-sub { text-align: center; color: var(--blue); font-size: 1.05rem; margin-top: -40px; margin-bottom: 28px; }
+.area-cities { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 12px; margin-bottom: 52px; }
+.area-cities-label { font-size: 0.85rem; font-weight: 600; color: #777; letter-spacing: 0.02em; }
+.area-city-link { display: inline-block; font-size: 0.875rem; font-weight: 600; color: var(--blue); background: var(--bg-light); border: 1px solid rgba(41,171,226,0.35); border-radius: var(--radius-pill); padding: 6px 16px; transition: var(--transition); }
+.area-city-link:hover { background: var(--blue); color: var(--white); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(41,171,226,0.3); }
 .areas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .area-block { display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px; align-items: start; }
 .area-map { border-radius: var(--radius-card); overflow: hidden; height: 220px; box-shadow: var(--shadow-card); }
@@ -749,6 +753,13 @@ footer { background: var(--black); color: var(--white); padding: 72px 0 32px; }
       <h2 id="areas-h2" class="display display-md">Proudly Serving</h2>
     </header>
     <p class="areas-sub">Professional exterior home solutions across Davis &amp; Salt Lake Counties &mdash; Utah's fastest-growing communities.</p>
+    <nav class="area-cities" aria-label="City service area pages">
+      <span class="area-cities-label">Cities we serve:</span>
+      <a href="bountiful.html" class="area-city-link">Bountiful</a>
+      <a href="salt-lake-city.html" class="area-city-link">Salt Lake City</a>
+      <a href="layton.html" class="area-city-link">Layton</a>
+      <a href="sandy.html" class="area-city-link">Sandy</a>
+    </nav>
     <div class="areas-grid">
 
       <div class="area-block">
